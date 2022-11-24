@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+          <link rel="stylesheet" href="/Youtube2/style.css">
+          <title>Document</title>
+</head>
+<body>
+          <div class="overlay first"></div>
+          <div class="overlay second"></div>
+          <div class="overlay third"></div>
+
+          <div class="wrapper">
+                    <nav>
+                              <div class="logo">Culture</div>
+                               <div class="menu">
+                                        <ul>
+                                                  <li>Home</li>
+                                                  <li>About</li>
+                                                  <li>Contact</li>
+                                                  <li>View</li>
+                                                  <li>Feedback</li>
+                                                  <li> <a href="javascript:void(0);" id="menu" onclick="myFunction()">
+                                                                <i class="ri-menu-fold-line"></i>
+                                                        </a>
+                                                   </li>
+                                        </ul>
+                               </div>
+                               <div class="search"><i class="ri-search-fill"></i></div>
+                               <div class="card"><i class="ri-shopping-cart-2-line"></i></div>
+                    </nav>
+          </div>
+          <hr class="border-bottom">
+          <div class="content"></div>
+          <div class="text">
+                    <p class="subtitle">The Authority Inc</p>
+                    <h1 class="title">
+                              <span>Hip-Hop <br>Culture </span>
+                    </h1>
+                    <p class="disc">Lorem ipsum dolor sit amet consectetur. <br> Lorem, ipsum dolor.</p>
+                    <a href="" class="readmore">Scroll For More</a>
+          </div>
+          <div class="img-1" id="img"></div>
+          <div class="slider">
+                    <div class="arrows">
+                              <ul>
+                                        <i class="ri-arrow-left-circle-line"></i>
+                                        <i class="ri-arrow-right-circle-line"></i>
+                              </ul>
+                    </div>
+                    <div class="pages"><span>01</span>04</div>
+          </div>
+          <div class="img-2" id="img"></div>
+          <div class="img-3" id="img"></div>
+
+
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+          <script>
+  
+                            TweenMax.to('.first',1,{
+                              delay: .2,
+                               left: '-100%',
+                               ease: Expo.easeInOut
+                    })
+                    TweenMax.to('.second',1.5,{
+                              delay: .4,
+                               left: '-100%',
+                               ease: Expo.easeInOut
+                    })
+                    TweenMax.to('.third',1.5,{
+                              delay: .6,
+                               left: '-100%',
+                               ease: Expo.easeInOut
+                    })
+                    var tl = gsap.timeline();
+                    tl.from('.logo',1,{
+                              delay: 1,
+                              opacity: 0,
+                              x: -20,
+                               ease: Expo.easeInOut
+                    })
+                    .from('.menu ul li',{
+                              delay: .2,
+                              opacity: 0,
+                              y: -20,
+                               ease:  Power4.easeInOut
+                    })
+                    .from('.search,.card',{
+                              delay: .2,
+                              opacity: 0,
+                              y: -20,
+                               ease: Expo.easeInOut
+                    })
+                    .from('.border-bottom',{
+                              delay: .2,
+                              opacity: 0,
+                              width:"100%",
+                               ease: Expo.easeInOut
+                    })
+                    .from('.subtitle',{
+                              opacity: 0,
+                              x:-20,
+                               ease: Expo.easeInOut
+                    },"a")
+                    .from('.title',{
+                              opacity: 0,
+                              x:-20,
+                               ease: Expo.easeInOut
+                    },"a")
+                    .from('.disc',{
+                              opacity: 0,
+                              x:-20,
+                               ease: Expo.easeInOut
+                    },"a")
+                    .from('.readmore',{
+                              opacity: 0,
+                              x:-20,
+                               ease: Expo.easeInOut
+                    },"a")
+                    .from('.img-1',{
+                              opacity: 0,
+                              duration:1.5,
+                               ease: Expo.easeInOut
+                    },"c")
+                    .from('.img-2',{
+                              delay:0.3,
+                              opacity: 0,
+                              duration:1.5,
+                               ease: Expo.easeInOut
+                    },"c")
+                    .from('.img-3',{
+                              delay:0.5,
+                              opacity: 0,
+                              duration:1.5,
+                               ease: Expo.easeInOut
+                    },"c")
+                    .from('.slider',{
+                              opacity: 0,
+                              y:-30,
+                               ease: Expo.easeInOut
+                    })
+                    
+          </script>
+
+</body>
+</html>
